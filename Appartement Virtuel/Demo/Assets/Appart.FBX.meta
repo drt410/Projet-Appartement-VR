@@ -1,0 +1,274 @@
+fileFormatVersion: 2
+guid: 0a30d7da4f0dcdb43b96151649a4e2a4
+timeCreated: 1524138827
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Box005
+    100004: Box006
+    100006: Box008
+    100008: Box010
+    100010: Box011
+    100012: Box012
+    100014: Box015
+    100016: Box016
+    100018: Box018
+    100020: Box019
+    100022: Box020
+    100024: Box021
+    100026: Box022
+    100028: Box024
+    100030: Box026
+    100032: Box027
+    100034: Box028
+    100036: Box029
+    100038: Box030
+    100040: Box031
+    100042: Box569549
+    100044: Box569550
+    100046: Box569551
+    100048: Box569552
+    100050: Box569553
+    100052: Box569554
+    100054: Box569555
+    100056: Box569556
+    100058: Box569557
+    100060: Box569558
+    100062: Box569559
+    100064: Box569560
+    100066: Box569561
+    100068: Box569562
+    100070: Plane001
+    100072: Plane005
+    100074: Plane006
+    400000: //RootNode
+    400002: Box005
+    400004: Box006
+    400006: Box008
+    400008: Box010
+    400010: Box011
+    400012: Box012
+    400014: Box015
+    400016: Box016
+    400018: Box018
+    400020: Box019
+    400022: Box020
+    400024: Box021
+    400026: Box022
+    400028: Box024
+    400030: Box026
+    400032: Box027
+    400034: Box028
+    400036: Box029
+    400038: Box030
+    400040: Box031
+    400042: Box569549
+    400044: Box569550
+    400046: Box569551
+    400048: Box569552
+    400050: Box569553
+    400052: Box569554
+    400054: Box569555
+    400056: Box569556
+    400058: Box569557
+    400060: Box569558
+    400062: Box569559
+    400064: Box569560
+    400066: Box569561
+    400068: Box569562
+    400070: Plane001
+    400072: Plane005
+    400074: Plane006
+    2100000: No Name
+    2100002: 'Material #177'
+    2100004: 'Material #441'
+    2100006: 'Material #440'
+    2100008: 'Material #442'
+    2100010: 'Material #439'
+    2100012: 'Material #438'
+    2100014: 'Material #437'
+    2300000: Box005
+    2300002: Box006
+    2300004: Box008
+    2300006: Box010
+    2300008: Box011
+    2300010: Box012
+    2300012: Box016
+    2300014: Box018
+    2300016: Box019
+    2300018: Box020
+    2300020: Box021
+    2300022: Box022
+    2300024: Box027
+    2300026: Box028
+    2300028: Box029
+    2300030: Box030
+    2300032: Box031
+    2300034: Box569549
+    2300036: Box569550
+    2300038: Box569551
+    2300040: Box569552
+    2300042: Box569553
+    2300044: Box569554
+    2300046: Box569555
+    2300048: Box569556
+    2300050: Box569557
+    2300052: Box569558
+    2300054: Box569559
+    2300056: Box569560
+    2300058: Box569561
+    2300060: Box569562
+    2300062: Plane001
+    2300064: Plane005
+    2300066: Plane006
+    3300000: Box005
+    3300002: Box006
+    3300004: Box008
+    3300006: Box010
+    3300008: Box011
+    3300010: Box012
+    3300012: Box016
+    3300014: Box018
+    3300016: Box019
+    3300018: Box020
+    3300020: Box021
+    3300022: Box022
+    3300024: Box027
+    3300026: Box028
+    3300028: Box029
+    3300030: Box030
+    3300032: Box031
+    3300034: Box569549
+    3300036: Box569550
+    3300038: Box569551
+    3300040: Box569552
+    3300042: Box569553
+    3300044: Box569554
+    3300046: Box569555
+    3300048: Box569556
+    3300050: Box569557
+    3300052: Box569558
+    3300054: Box569559
+    3300056: Box569560
+    3300058: Box569561
+    3300060: Box569562
+    3300062: Plane001
+    3300064: Plane005
+    3300066: Plane006
+    4300000: Plane001
+    4300002: Box005
+    4300004: Box006
+    4300006: Box008
+    4300008: Box010
+    4300010: Box011
+    4300012: Box012
+    4300014: Box016
+    4300016: Box018
+    4300018: Box019
+    4300020: Box020
+    4300022: Box021
+    4300024: Box022
+    4300026: Box027
+    4300028: Box028
+    4300030: Box029
+    4300032: Box030
+    4300034: Box031
+    4300036: Plane005
+    4300038: Box569549
+    4300040: Plane006
+    4300042: Box569550
+    4300044: Box569551
+    4300046: Box569552
+    4300048: Box569553
+    4300050: Box569554
+    4300052: Box569555
+    4300054: Box569556
+    4300056: Box569557
+    4300058: Box569558
+    4300060: Box569559
+    4300062: Box569560
+    4300064: Box569561
+    4300066: Box569562
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,349 @@
+fileFormatVersion: 2
+guid: c92373c6615edf34b9b2fa45a8502b8e
+timeCreated: 1522930899
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Box005
+    100006: Box007
+    100008: Box16920
+    100010: Box16923
+    100012: Box16924
+    100014: Box16925
+    100016: Box16926
+    100018: Box16927
+    100020: Box16928
+    100022: Box16929
+    100024: Box16932
+    100026: Box16933
+    100028: Box16934
+    100030: Box16935
+    100032: Box16936
+    100034: Box16937
+    100036: Box16938
+    100038: ChamferCyl
+    100040: Circle160
+    100042: Circle161
+    100044: Cylinder00
+    100046: Cylinder01
+    100048: Cylinder02
+    100050: Cylinder03
+    100052: Cylinder04
+    100054: Cylinder05
+    100056: Cylinder06
+    100058: Cylinder07
+    100060: Cylinder08
+    100062: Cylinder09
+    100064: Cylinder10
+    100066: Cylinder11
+    100068: Group01
+    100070: Group18710
+    100072: Group18711
+    100074: Group18712
+    100076: hansgrohe
+    100078: Layer:fixt
+    100080: Line2092
+    100082: Line2093
+    100084: Line2094
+    100086: Line2095
+    100088: //RootNode
+    100090: Mattress
+    100092: Object
+    100094: Object1256
+    100096: peregorodk
+    100098: steklo 1
+    100100: steklo 2
+    100102: steklo dv0
+    100104: steklo dve
+    100106: sub01
+    100108: sub02
+    400000: Box001
+    400002: Box002
+    400004: Box005
+    400006: Box007
+    400008: Box16920
+    400010: Box16923
+    400012: Box16924
+    400014: Box16925
+    400016: Box16926
+    400018: Box16927
+    400020: Box16928
+    400022: Box16929
+    400024: Box16932
+    400026: Box16933
+    400028: Box16934
+    400030: Box16935
+    400032: Box16936
+    400034: Box16937
+    400036: Box16938
+    400038: ChamferCyl
+    400040: Circle160
+    400042: Circle161
+    400044: Cylinder00
+    400046: Cylinder01
+    400048: Cylinder02
+    400050: Cylinder03
+    400052: Cylinder04
+    400054: Cylinder05
+    400056: Cylinder06
+    400058: Cylinder07
+    400060: Cylinder08
+    400062: Cylinder09
+    400064: Cylinder10
+    400066: Cylinder11
+    400068: Group01
+    400070: Group18710
+    400072: Group18711
+    400074: Group18712
+    400076: hansgrohe
+    400078: Layer:fixt
+    400080: Line2092
+    400082: Line2093
+    400084: Line2094
+    400086: Line2095
+    400088: //RootNode
+    400090: Mattress
+    400092: Object
+    400094: Object1256
+    400096: peregorodk
+    400098: steklo 1
+    400100: steklo 2
+    400102: steklo dv0
+    400104: steklo dve
+    400106: sub01
+    400108: sub02
+    2100000: No Name
+    2100002: Ceramiks yellow
+    2100004: Glass Mat
+    2100006: 'Material #136'
+    2100008: 'Material #137'
+    2100010: 'Material #138'
+    2100012: 'Material #139'
+    2300000: Box001
+    2300002: Box002
+    2300004: Box005
+    2300006: Box007
+    2300008: Box16920
+    2300010: Box16923
+    2300012: Box16924
+    2300014: Box16925
+    2300016: Box16926
+    2300018: Box16927
+    2300020: Box16928
+    2300022: Box16929
+    2300024: Box16932
+    2300026: Box16933
+    2300028: Box16934
+    2300030: Box16935
+    2300032: Box16936
+    2300034: Box16937
+    2300036: Box16938
+    2300038: ChamferCyl
+    2300040: Circle160
+    2300042: Circle161
+    2300044: Cylinder00
+    2300046: Cylinder01
+    2300048: Cylinder02
+    2300050: Cylinder03
+    2300052: Cylinder04
+    2300054: Cylinder05
+    2300056: Cylinder06
+    2300058: Cylinder07
+    2300060: Cylinder08
+    2300062: Cylinder09
+    2300064: Cylinder10
+    2300066: Cylinder11
+    2300068: Layer:fixt
+    2300070: Line2092
+    2300072: Line2093
+    2300074: Line2094
+    2300076: Line2095
+    2300078: Mattress
+    2300080: Object
+    2300082: Object1256
+    2300084: steklo 1
+    2300086: steklo 2
+    2300088: steklo dv0
+    2300090: steklo dve
+    2300092: sub01
+    2300094: sub02
+    3300000: Box001
+    3300002: Box002
+    3300004: Box005
+    3300006: Box007
+    3300008: Box16920
+    3300010: Box16923
+    3300012: Box16924
+    3300014: Box16925
+    3300016: Box16926
+    3300018: Box16927
+    3300020: Box16928
+    3300022: Box16929
+    3300024: Box16932
+    3300026: Box16933
+    3300028: Box16934
+    3300030: Box16935
+    3300032: Box16936
+    3300034: Box16937
+    3300036: Box16938
+    3300038: ChamferCyl
+    3300040: Circle160
+    3300042: Circle161
+    3300044: Cylinder00
+    3300046: Cylinder01
+    3300048: Cylinder02
+    3300050: Cylinder03
+    3300052: Cylinder04
+    3300054: Cylinder05
+    3300056: Cylinder06
+    3300058: Cylinder07
+    3300060: Cylinder08
+    3300062: Cylinder09
+    3300064: Cylinder10
+    3300066: Cylinder11
+    3300068: Layer:fixt
+    3300070: Line2092
+    3300072: Line2093
+    3300074: Line2094
+    3300076: Line2095
+    3300078: Mattress
+    3300080: Object
+    3300082: Object1256
+    3300084: steklo 1
+    3300086: steklo 2
+    3300088: steklo dv0
+    3300090: steklo dve
+    3300092: sub01
+    3300094: sub02
+    4300000: Box001
+    4300002: Mattress
+    4300004: sub01
+    4300006: sub02
+    4300008: ChamferCyl
+    4300010: Box002
+    4300012: Box005
+    4300014: Layer:fixt
+    4300016: Box007
+    4300018: Box16920
+    4300020: Cylinder02
+    4300022: Line2092
+    4300024: steklo 2
+    4300026: Line2093
+    4300028: Cylinder00
+    4300030: Cylinder01
+    4300032: Circle160
+    4300034: steklo dve
+    4300036: Box16923
+    4300038: Box16924
+    4300040: Box16925
+    4300042: Box16926
+    4300044: Box16927
+    4300046: Box16928
+    4300048: Cylinder03
+    4300050: Object
+    4300052: Box16929
+    4300054: Cylinder04
+    4300056: Cylinder05
+    4300058: Cylinder06
+    4300060: Line2094
+    4300062: steklo 1
+    4300064: Line2095
+    4300066: Cylinder07
+    4300068: Cylinder08
+    4300070: Circle161
+    4300072: Box16932
+    4300074: Box16933
+    4300076: Box16934
+    4300078: Box16935
+    4300080: Box16936
+    4300082: Box16937
+    4300084: Cylinder09
+    4300086: Object1256
+    4300088: Box16938
+    4300090: Cylinder10
+    4300092: Cylinder11
+    4300094: steklo dv0
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

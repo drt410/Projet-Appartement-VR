@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 25dd0a0d762dcd84e882a89f9511f6b2
+timeCreated: 1525681208
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box569563
+    100002: Box569566
+    100004: Box569573
+    100006: Box569574
+    100008: Box569575
+    100010: Box569576
+    100012: Box569577
+    100014: //RootNode
+    100016: Line027
+    100018: Plane011
+    100020: Tube003
+    100022: Tube004
+    100024: Plane012
+    100026: harnais
+    100028: sangle1
+    400000: Box569563
+    400002: Box569566
+    400004: Box569573
+    400006: Box569574
+    400008: Box569575
+    400010: Box569576
+    400012: Box569577
+    400014: //RootNode
+    400016: Line027
+    400018: Plane011
+    400020: Tube003
+    400022: Tube004
+    400024: Plane012
+    400026: harnais
+    400028: sangle1
+    2100000: No Name
+    2300000: Box569563
+    2300002: Box569566
+    2300004: Box569573
+    2300006: Box569574
+    2300008: Box569575
+    2300010: Box569576
+    2300012: Box569577
+    2300014: Line027
+    2300016: Plane011
+    2300018: Tube003
+    2300020: Tube004
+    2300022: Plane012
+    2300024: //RootNode
+    2300026: harnais
+    2300028: sangle1
+    3300000: Box569563
+    3300002: Box569566
+    3300004: Box569573
+    3300006: Box569574
+    3300008: Box569575
+    3300010: Box569576
+    3300012: Box569577
+    3300014: Line027
+    3300016: Plane011
+    3300018: Tube003
+    3300020: Tube004
+    3300022: Plane012
+    3300024: //RootNode
+    3300026: harnais
+    3300028: sangle1
+    4300000: Box569563
+    4300002: Box569566
+    4300004: Tube003
+    4300006: Line027
+    4300008: Tube004
+    4300010: Plane011
+    4300012: Box569573
+    4300014: Box569574
+    4300016: Box569575
+    4300018: Box569576
+    4300020: Box569577
+    4300022: Plane012
+    4300024: harnais
+    4300026: sangle1
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

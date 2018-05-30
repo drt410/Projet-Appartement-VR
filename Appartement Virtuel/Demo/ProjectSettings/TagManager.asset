@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Undefined
+  - interactible
+  - interactible_rgt
+  - interactible_plt
+  - interactible_lit_douche
+  - sejourL
+  - interactible_store
+  - interactible_porte
+  - leve_personne
+  - interactible_plt2
+  - interactible_porte2
+  - interactible_store2
+  - support_meuble
+  - meuble_haut
+  - chambreL
+  - SdeL
+  - cuisine
+  - douche
+  - chambre
+  - sejour
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
