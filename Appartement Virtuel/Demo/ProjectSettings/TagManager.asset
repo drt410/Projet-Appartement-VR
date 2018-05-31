@@ -3,27 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Undefined
-  - interactible
-  - interactible_rgt
-  - interactible_plt
-  - interactible_lit_douche
-  - sejourL
-  - interactible_store
-  - interactible_porte
-  - leve_personne
-  - interactible_plt2
-  - interactible_porte2
-  - interactible_store2
-  - support_meuble
-  - meuble_haut
-  - chambreL
-  - SdeL
-  - cuisine
-  - douche
-  - chambre
-  - sejour
+  tags: []
   layers:
   - Default
   - TransparentFX
