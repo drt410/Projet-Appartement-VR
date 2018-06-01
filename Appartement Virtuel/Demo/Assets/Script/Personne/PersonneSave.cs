@@ -55,7 +55,7 @@ public class PersonneSave : MonoBehaviour
 
 
 
-    void OnTriggerStay(Collider collider)
+    /*void OnTriggerStay(Collider collider)
     {
         {
             if (collider.gameObject.tag == "cuisine")
@@ -120,7 +120,7 @@ public class PersonneSave : MonoBehaviour
         PlayerPrefs.SetInt("nombre", nb);
         
         print(" personneSave: " + PlayerPrefs.GetInt("nombre"));
-    }
+    }*/
 }
     [Serializable]
     class Personne

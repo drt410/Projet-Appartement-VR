@@ -60,6 +60,7 @@ public class PersonneVue : MonoBehaviour {
 
         transform.rotation = Quaternion.Euler(targetRot);
         body.rotation = Quaternion.Euler(targetRotBody);
+       // print("ok");
 
         if (Input.GetKeyDown("u"))
         {

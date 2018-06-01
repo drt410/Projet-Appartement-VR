@@ -9,8 +9,6 @@ public class PersonneInteraction : MonoBehaviour {
     public float speed = 0.001f;
     public float distanceVue;
 
-    private Animator anim;
-
     public KeyCode moveDown;
     public KeyCode moveUp;
     public KeyCode deplacer;
