@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+
+[RequireComponent(typeof(PersonneMouvement))]
 public class ControllerVR : MonoBehaviour
 {
     public float sensitivity;
@@ -24,8 +26,8 @@ public class ControllerVR : MonoBehaviour
 
     RaycastHit hit;
 
+    private PersonneMouvement perso;
     private SteamVR_TrackedObject trackedObj;
-    // 2
     private SteamVR_Controller.Device Controller
     {
         get { return SteamVR_Controller.Input((int)trackedObj.index); }
@@ -36,11 +38,58 @@ public class ControllerVR : MonoBehaviour
         trackedObj = GetComponent<SteamVR_TrackedObject>();
     }
 
+    void Start()
+    {
+        perso = GetComponent<PersonneMouvement>();
+       // Cursor.visible = false;
+
+    }
+
     // Update is called once per frame
     void Update()
     {
-        RotationCl();
-        Debug.DrawRay(this.transform.position, this.transform.forward * distanceVue, Color.magenta);
+        if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
+        {
+            Vector2 touchpad = (Controller.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0));
+          //  print("Pressing Touchpad");
+            
+
+            if (touchpad.x < -0.7f)
+            {
+                RotationCl();
+            }
+            else if (touchpad.x > 0.7f)
+            {
+                RotationCl();
+            }
+
+            if(touchpad.y > 0.7f)
+            {
+                float deltaZ = Input.GetAxisRaw("Vertical");
+                float deltaX = Input.GetAxisRaw("Horizontal");
+
+                Vector3 moveHorizontal = transform.right * deltaX;
+                Vector3 moveVertical = transform.forward * deltaZ;
+
+                Vector3 velocity = (moveVertical).normalized * speed;
+
+                perso.Move(velocity);
+
+            }else if(touchpad.y < -0.7f)
+            {
+                float deltaZ = Input.GetAxisRaw("Vertical");
+                float deltaX = Input.GetAxisRaw("Horizontal");
+
+                Vector3 moveHorizontal = transform.right * deltaX;
+                Vector3 moveVertical = transform.forward * deltaZ;
+
+                Vector3 velocity = (moveVertical).normalized * speed;
+
+                perso.Move(velocity);
+            }
+
+        }
+        /*Debug.DrawRay(this.transform.position, this.transform.forward * distanceVue, Color.magenta);
 
             if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceVue))
             {
@@ -219,7 +268,7 @@ public class ControllerVR : MonoBehaviour
                 }
 
 
-            }
+            }*/
         }
     void RotationCl()
     {
@@ -282,6 +331,8 @@ public class ControllerVR : MonoBehaviour
     //rotation avec souris
     void Rotation()
     {
+
+
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
         float deltaX = Input.GetAxisRaw("Horizontal");

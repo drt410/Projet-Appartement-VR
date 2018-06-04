@@ -5,8 +5,6 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 public class LevePersonneController : MonoBehaviour {
 
-    public List<TimelineAsset> timelines;
-    public List<PlayableDirector> playableDirectors;
 	public PlayableDirector plDirector;
 	public KeyCode deplacer;
 
@@ -15,11 +13,11 @@ public class LevePersonneController : MonoBehaviour {
 	{
 		print ("test");
 
-		if (Input.GetKeyDown (deplacer)) {
+		//if (Input.GetKeyDown (deplacer)) {
 
 			plDirector.Play ();
 		}
-		}
+		//}
 	/*
     public void play()
     {
