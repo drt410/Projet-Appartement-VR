@@ -19,6 +19,7 @@ public class ControllerVR : MonoBehaviour
     public KeyCode deplacer;
     public PlayableDirector director;
     public PlayableDirector director2;
+    public PlayableDirector director3;
 
     private bool ranger = true;
     private float countdown;
@@ -48,14 +49,10 @@ public class ControllerVR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Controller.GetHairTrigger())
+        if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
         {
-            //Vector2 touchpad = (Controller.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0));
-             // print("Pressing Touchpad");
 
-
-
-
+            Vector2 touchpad = (Controller.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0));
 
             Debug.DrawRay(this.transform.position, this.transform.forward * distanceVue, Color.magenta);
 
@@ -64,60 +61,62 @@ public class ControllerVR : MonoBehaviour
                 Animator anim = hit.collider.gameObject.GetComponent<Animator>();
                 director = hit.collider.gameObject.GetComponent<PlayableDirector>();
 
-                if (hit.collider.gameObject.tag == "leve_personne")
+               /* if (hit.collider.gameObject.tag == "interactible_store")
+                {
+                    Debug.Log("store " + hit.collider.gameObject.name);
+                    if (touchpad.y > 0.7f)
+                    {
+                        anim.Play("ouvrir");
+                        print("store ouvert" + hit.collider.gameObject.name);
+                        anim.SetBool("fermer", false);
+
+                    }
+                    else if (touchpad.y < -0.7f)
+                    {
+                        anim.SetBool("fermer", true);
+                    }
+
+                }*/
+
+                if (touchpad.y > 0.7f)
+                {
+                    if (hit.collider.gameObject.tag == "leve_personne")
                 {
                     print("douche");
 
-                    if (Input.GetKeyDown("l"))
-                    {
-                        director.Play();
+                        director3.Play();
+                        print("Toilette");
+
                     }
-                }
                 if (hit.collider.gameObject.tag == "interactible")
                 {
-                    if (Input.GetKeyDown(deplacer))
-                    {
+           
                         anim.Play("ouvrir");
                         anim.SetBool("ranger", false);
-                    }
-                    else if (Input.GetKeyDown(deplacer))
-                    {
-                        anim.SetBool("ranger", true);
-                    }
+                  
                 }
 
                 if (hit.collider.gameObject.tag == "interactible_store")
                 {
-                    // Debug.Log("store " + hit.collider.gameObject.name);
-                    // if (Controller.GetAxis() != new Vector2(0.0f, 1.0f))
-                    // {
-                    anim.Play("ouvrir");
-                    print("store ouvert" + hit.collider.gameObject.name);
-                    anim.SetBool("fermer", false);
-                }
-                else if (anim.GetBool("fermer") == false)
-                {
-                    anim.SetBool("fermer", true);
+                    Debug.Log("store " + hit.collider.gameObject.name);
+                        anim.Play("ouvrir");
+                        print("store ouvert" + hit.collider.gameObject.name);
+                        anim.SetBool("fermer", false);
+
                 }
                 
-
 
                 if (hit.collider.gameObject.tag == "interactible_store2")
                 {
                     Debug.Log("store " + hit.collider.gameObject.name);
-                    if (Input.GetKeyDown(moveUp))
-                    {
+
                         anim.Play("ouvrir_storeC");
                         Debug.Log("store ouvert" + hit.collider.gameObject.name);
                         anim.SetBool("fermer", false);
-                    }
-                    else if (Input.GetKeyDown(moveDown))
-                    {
-                        anim.SetBool("fermer", true);
-                    }
+
                 }
 
-                if (hit.collider.gameObject.tag == "interactible_porte")
+               /* if (hit.collider.gameObject.tag == "interactible_porte")
                 {
                     //  Debug.Log("porte " + hit.collider.gameObject.name);
                     if (Input.GetKeyDown(deplacer) && anim.GetBool("fermer") == true)
@@ -142,9 +141,9 @@ public class ControllerVR : MonoBehaviour
                     {
                         director2.Play();
                     }
-                }
+                }*/
 
-                if (hit.collider.gameObject.tag == "interactible_rgt")
+               /* if (hit.collider.gameObject.tag == "interactible_rgt")
                 {
                     //StartCoroutine (Timer (anima));
                     if (Input.GetKeyDown(deplacer))
@@ -157,22 +156,16 @@ public class ControllerVR : MonoBehaviour
                         anim.SetBool("ranger", true);
                     }
                 }
-                //StopCoroutine (Timer (anim));
+                //StopCoroutine (Timer (anim));*/
 
                 if (hit.collider.gameObject.tag == "interactible_plt")
                 {
                     //Debug.Log("plan de travail "+hit.collider.gameObject.name);
                     Transform corps = hit.collider.gameObject.transform;
 
-                    if (Input.GetKey(moveDown))
-                    {
-                        corps.Translate(0, 0, -speed);
-                    }
-
-                    if (Input.GetKey(moveUp))
-                    {
+              
                         corps.Translate(0, 0, speed);
-                    }
+                
                 }
 
                 if (hit.collider.gameObject.tag == "interactible_plt2")
@@ -180,15 +173,9 @@ public class ControllerVR : MonoBehaviour
                     //Debug.Log("plan de travail "+hit.collider.gameObject.name);
                     Transform corps = hit.collider.gameObject.transform;
 
-                    if (Input.GetKey(moveDown))
-                    {
-                        corps.Translate(0, -speed, 0);
-                    }
 
-                    if (Input.GetKey(moveUp))
-                    {
                         corps.Translate(0, speed, 0);
-                    }
+                    
                 }
 
                 if (hit.collider.gameObject.tag == "meuble_haut")
@@ -196,20 +183,8 @@ public class ControllerVR : MonoBehaviour
                     //Debug.Log("plan de travail "+hit.collider.gameObject.name);
                     Transform corps = hit.collider.gameObject.transform;
                     supports = GameObject.FindGameObjectsWithTag("support_meuble");
-                    if (Input.GetKey(moveDown))
-                    {
-                        foreach (GameObject support in supports)
-                        {
-                            if (support.transform.localScale.z < 60.0f)
-                            {
-                                support.transform.localScale += new Vector3(0, 0, speed);
-                                corps.Translate(0, speed, -speed);
-                            }
-                        }
-                    }
 
-                    if (Input.GetKey(moveUp))
-                    {
+
                         foreach (GameObject support in supports)
                         {
                             if (support.transform.localScale.z > 6.0f)
@@ -218,27 +193,106 @@ public class ControllerVR : MonoBehaviour
                                 corps.Translate(0, -speed, speed);
                             }
                         }
-                    }
+                    
                 }
 
                 if (hit.collider.gameObject.tag == "interactible_lit_douche")
                 {
                     Debug.Log(hit.collider.gameObject.name);
-                    if (Input.GetKeyDown(moveDown))
-                    {
-                        anim.Play("descendre");
-                        anim.SetBool("ranger", false);
-                    }
-                    else if (Input.GetKeyDown(moveUp))
-                    {
+
                         anim.SetBool("ranger", true);
-                    }
+
+                    
+                }
                 }
 
+                else if(touchpad.y < -0.7f)
+                {
 
+                    if (hit.collider.gameObject.tag == "interactible_lit_douche")
+                    {
+                        Debug.Log(hit.collider.gameObject.name);
+
+
+                        anim.Play("descendre");
+                        anim.SetBool("ranger", false);
+
+                    }
+                    if (hit.collider.gameObject.tag == "interactible")
+                    {
+
+                        anim.SetBool("ranger", true);
+
+                    }
+
+                    if (hit.collider.gameObject.tag == "interactible_plt")
+                    {
+                        //Debug.Log("plan de travail "+hit.collider.gameObject.name);
+                        Transform corps = hit.collider.gameObject.transform;
+       
+                            corps.Translate(0, 0, -speed);
+
+                    }
+
+                    if (hit.collider.gameObject.tag == "interactible_plt2")
+                    {
+                        //Debug.Log("plan de travail "+hit.collider.gameObject.name);
+                        Transform corps = hit.collider.gameObject.transform;
+
+                            corps.Translate(0, -speed, 0);
+                        
+
+                    }
+
+                    if (hit.collider.gameObject.tag == "meuble_haut")
+                    {
+                        //Debug.Log("meuble_haut " + hit.collider.gameObject.name);
+                        Transform corps = hit.collider.gameObject.transform;
+                        supports = GameObject.FindGameObjectsWithTag("support_meuble");
+              
+                            foreach (GameObject support in supports)
+                            {
+                                if (support.transform.localScale.z < 60.0f)
+                                {
+                                    support.transform.localScale += new Vector3(0, 0, speed);
+                                    corps.Translate(0, speed, -speed);
+                                Debug.Log("meuble_haut descend " + hit.collider.gameObject.name);
+                            }
+                            }
+                        
+
+
+                    }
+                    if (hit.collider.gameObject.tag == "interactible_store")
+                    {
+
+
+                            anim.SetBool("fermer", true);
+                        
+
+                    }
+
+
+                    if (hit.collider.gameObject.tag == "interactible_store2")
+                    {
+                        Debug.Log("store " + hit.collider.gameObject.name);
+
+                            anim.SetBool("fermer", true);
+                        
+                    }
+
+                    if (hit.collider.gameObject.tag == "interactible")
+                    {
+
+                        anim.SetBool("ranger", true);
+
+                    }
+
+                }
             }
         }
     }
+
     void RotationCl()
     {
 

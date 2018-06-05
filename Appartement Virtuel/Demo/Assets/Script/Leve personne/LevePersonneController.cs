@@ -9,14 +9,14 @@ public class LevePersonneController : MonoBehaviour {
 	public KeyCode deplacer;
 
 
-	void OnTriggerStay(Collider other)
+	/*void OnTriggerStay(Collider other)
 	{
 		print ("test");
 
 		//if (Input.GetKeyDown (deplacer)) {
 
 			plDirector.Play ();
-		}
+		}*/
 		//}
 	/*
     public void play()
