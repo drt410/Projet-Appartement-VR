@@ -48,48 +48,16 @@ public class ControllerVR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
+        if (Controller.GetHairTrigger())
         {
-            Vector2 touchpad = (Controller.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0));
-          //  print("Pressing Touchpad");
-            
+            //Vector2 touchpad = (Controller.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0));
+             // print("Pressing Touchpad");
 
-            if (touchpad.x < -0.7f)
-            {
-                RotationCl();
-            }
-            else if (touchpad.x > 0.7f)
-            {
-                RotationCl();
-            }
 
-            if(touchpad.y > 0.7f)
-            {
-                float deltaZ = Input.GetAxisRaw("Vertical");
-                float deltaX = Input.GetAxisRaw("Horizontal");
 
-                Vector3 moveHorizontal = transform.right * deltaX;
-                Vector3 moveVertical = transform.forward * deltaZ;
 
-                Vector3 velocity = (moveVertical).normalized * speed;
 
-                perso.Move(velocity);
-
-            }else if(touchpad.y < -0.7f)
-            {
-                float deltaZ = Input.GetAxisRaw("Vertical");
-                float deltaX = Input.GetAxisRaw("Horizontal");
-
-                Vector3 moveHorizontal = transform.right * deltaX;
-                Vector3 moveVertical = transform.forward * deltaZ;
-
-                Vector3 velocity = (moveVertical).normalized * speed;
-
-                perso.Move(velocity);
-            }
-
-        }
-        /*Debug.DrawRay(this.transform.position, this.transform.forward * distanceVue, Color.magenta);
+            Debug.DrawRay(this.transform.position, this.transform.forward * distanceVue, Color.magenta);
 
             if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceVue))
             {
@@ -120,18 +88,18 @@ public class ControllerVR : MonoBehaviour
 
                 if (hit.collider.gameObject.tag == "interactible_store")
                 {
-                   // Debug.Log("store " + hit.collider.gameObject.name);
-                if (Controller.GetAxis() != new Vector2(0.0f, 1.0f))
-                {
+                    // Debug.Log("store " + hit.collider.gameObject.name);
+                    // if (Controller.GetAxis() != new Vector2(0.0f, 1.0f))
+                    // {
                     anim.Play("ouvrir");
-                       print("store ouvert" + hit.collider.gameObject.name);
-                        anim.SetBool("fermer", false);
-                    }
-                    else if (Input.GetKeyDown(moveDown))
-                    {
-                        anim.SetBool("fermer", true);
-                    }
+                    print("store ouvert" + hit.collider.gameObject.name);
+                    anim.SetBool("fermer", false);
                 }
+                else if (anim.GetBool("fermer") == false)
+                {
+                    anim.SetBool("fermer", true);
+                }
+                
 
 
                 if (hit.collider.gameObject.tag == "interactible_store2")
@@ -268,8 +236,9 @@ public class ControllerVR : MonoBehaviour
                 }
 
 
-            }*/
+            }
         }
+    }
     void RotationCl()
     {
 
