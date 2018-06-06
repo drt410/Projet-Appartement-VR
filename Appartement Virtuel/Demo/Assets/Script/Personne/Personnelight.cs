@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Personnelight : MonoBehaviour {
-
+        
     private GameObject[] lits;
     private bool on = true;
     private Light lum;
     public KeyCode allumer;
     public KeyCode eteindre;
+
+    void Update() { }
 
     // Update is called once per frame
     void OnTriggerStay() {

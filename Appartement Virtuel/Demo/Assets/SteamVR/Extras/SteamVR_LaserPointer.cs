@@ -15,7 +15,7 @@ public delegate void PointerEventHandler(object sender, PointerEventArgs e);
 
 public class SteamVR_LaserPointer : MonoBehaviour
 {
-    public bool active = true;
+    public bool active = false;
     public Color color;
     public float thickness = 0.002f;
     public GameObject holder;
@@ -61,7 +61,9 @@ public class SteamVR_LaserPointer : MonoBehaviour
         Material newMaterial = new Material(Shader.Find("Unlit/Color"));
         newMaterial.SetColor("_Color", color);
         pointer.GetComponent<MeshRenderer>().material = newMaterial;
-	}
+
+
+    }
 
     public virtual void OnPointerIn(PointerEventArgs e)
     {
@@ -79,13 +81,18 @@ public class SteamVR_LaserPointer : MonoBehaviour
     // Update is called once per frame
 	void Update ()
     {
-        if (!isActive)
+
+        if (!active)
+        {
+            isActive = false;
+            this.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else
         {
             isActive = true;
-            this.transform.GetChild(0).gameObject.SetActive(true);
+            this.transform.GetChild(1).gameObject.SetActive(true);
         }
-
-        float dist = 100f;
+        float dist = 500f;
 
         SteamVR_TrackedController controller = GetComponent<SteamVR_TrackedController>();
 
@@ -100,11 +107,13 @@ public class SteamVR_LaserPointer : MonoBehaviour
             {
                 args.controllerIndex = controller.controllerIndex;
             }
+            
             args.distance = 0f;
             args.flags = 0;
             args.target = previousContact;
             OnPointerOut(args);
             previousContact = null;
+       
         }
         if(bHit && previousContact != hit.transform)
         {
@@ -118,14 +127,23 @@ public class SteamVR_LaserPointer : MonoBehaviour
             argsIn.target = hit.transform;
             OnPointerIn(argsIn);
             previousContact = hit.transform;
+           
         }
         if(!bHit)
         {
             previousContact = null;
+            hit.distance = 0f;
+            
         }
-        if (bHit && hit.distance < 100f)
+        if(hit.distance > 200f)
         {
+            this.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        if (bHit && hit.distance <=500f)
+        {
+            
             dist = hit.distance;
+            this.transform.GetChild(1).gameObject.SetActive(true);
         }
 
         if (controller != null && controller.triggerPressed)
