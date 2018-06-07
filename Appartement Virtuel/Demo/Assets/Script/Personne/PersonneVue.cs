@@ -41,8 +41,8 @@ public class PersonneVue : MonoBehaviour {
     {
 		
        // Cursor.lockState = CursorLockMode.Locked;
-       // Rotation();
-        RotationCl();
+        Rotation();
+        //RotationCl();
 
     }
 
