@@ -62,7 +62,7 @@ public class PersonneVue : MonoBehaviour {
         body.rotation = Quaternion.Euler(targetRotBody);
        // print("ok");
 
-        if (Input.GetKeyDown("u"))
+        if (Input.GetKeyDown("u") || Input.GetKey("u"))
         {
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
@@ -83,7 +83,7 @@ public class PersonneVue : MonoBehaviour {
             body.rotation = Quaternion.Euler(targetRotBody);
         }
 
-        if (Input.GetKeyDown("p"))
+        if (Input.GetKeyDown("p") || Input.GetKey("p"))
         {
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
@@ -111,14 +111,14 @@ public class PersonneVue : MonoBehaviour {
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
         float deltaX = Input.GetAxisRaw("Horizontal");
-        float rotatAmountX = deltaX + mouseX * sensitivity;
+        float rotatAmountX = mouseX + deltaX * sensitivity;
         //float rotatAmountX = deltaX * sensitivity;
         float rotatAmountY = mouseY * sensitivity;
 
         Vector3 targetRot = transform.rotation.eulerAngles;
         Vector3 targetRotBody = body.rotation.eulerAngles;
 
-         targetRot.x -= rotatAmountY;
+        targetRot.x -= rotatAmountY;
         targetRot.z = 0;
         targetRotBody.y += rotatAmountX;
 
