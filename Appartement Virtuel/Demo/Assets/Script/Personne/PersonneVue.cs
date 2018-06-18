@@ -41,8 +41,8 @@ public class PersonneVue : MonoBehaviour {
     {
 		
        // Cursor.lockState = CursorLockMode.Locked;
-        Rotation();
-        //RotationCl();
+        //Rotation();
+        RotationCl();
 
     }
 
@@ -50,8 +50,10 @@ public class PersonneVue : MonoBehaviour {
     void RotationCl()
     {
 
+        float mouseX = Input.GetAxis("Mouse X");
         float deltaX = Input.GetAxisRaw("Horizontal");
-        float rotatAmountX = deltaX * sensitivity;
+        float rotatAmountX = mouseX + deltaX * sensitivity;
+       // float rotatAmountX = deltaX * sensitivity;
 
         Vector3 targetRot = transform.rotation.eulerAngles;
         Vector3 targetRotBody = body.rotation.eulerAngles;
@@ -64,7 +66,7 @@ public class PersonneVue : MonoBehaviour {
 
         if (Input.GetKeyDown("u") || Input.GetKey("u"))
         {
-            float mouseX = Input.GetAxis("Mouse X");
+            mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
            
           //  float rotatAmountX = deltaX + mouseX * sensitivity;
@@ -85,7 +87,7 @@ public class PersonneVue : MonoBehaviour {
 
         if (Input.GetKeyDown("p") || Input.GetKey("p"))
         {
-            float mouseX = Input.GetAxis("Mouse X");
+            mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
            // float deltaX = Input.GetAxisRaw("Horizontal");
            // float rotatAmountX = deltaX + mouseX * sensitivity;

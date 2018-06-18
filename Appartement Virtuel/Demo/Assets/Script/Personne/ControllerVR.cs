@@ -41,10 +41,14 @@ public class ControllerVR : MonoBehaviour
     void Awake()
     {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
+        Valve.VR.OpenVR.System.ResetSeatedZeroPose();
+        Valve.VR.OpenVR.Compositor.SetTrackingSpace(
+        Valve.VR.ETrackingUniverseOrigin.TrackingUniverseSeated);
     }
 
     void Start()
     {
+        
         perso = GetComponent<PersonneMouvement>();
        // Cursor.visible = false;
 
