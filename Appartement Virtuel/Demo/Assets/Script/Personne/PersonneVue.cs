@@ -52,8 +52,8 @@ public class PersonneVue : MonoBehaviour {
 
         float mouseX = Input.GetAxis("Mouse X");
         float deltaX = Input.GetAxisRaw("Horizontal");
-        float rotatAmountX = mouseX + deltaX * sensitivity;
-       // float rotatAmountX = deltaX * sensitivity;
+        //float rotatAmountX = mouseX + deltaX * sensitivity;
+        float rotatAmountX = deltaX * sensitivity;
 
         Vector3 targetRot = transform.rotation.eulerAngles;
         Vector3 targetRotBody = body.rotation.eulerAngles;
