@@ -8,7 +8,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class PersonneSave : MonoBehaviour
 {
 
-    string path = "Assets\\Script\\Personne\\Log";
+    string path = "C:\\Users\\drtra\\Documents\\Log";
     public Transform body;
     string filename;
     public GameObject personne;
@@ -19,11 +19,11 @@ public class PersonneSave : MonoBehaviour
     {
         if (!System.IO.File.Exists(path + "\\personne" + nb + ".txt"))
         {
-            //save();
+           // save();
         }
         else
         {
-           // load();
+          // load();
         }
     }
 
@@ -51,11 +51,12 @@ public class PersonneSave : MonoBehaviour
         //nb = PlayerPrefs.GetInt("nombre");
         // log(filename);
     }
+    void Update() { }
 
 
 
 
-    /*void OnTriggerStay(Collider collider)
+   /* void OnTriggerStay(Collider collider)
     {
         {
             if (collider.gameObject.tag == "cuisine")

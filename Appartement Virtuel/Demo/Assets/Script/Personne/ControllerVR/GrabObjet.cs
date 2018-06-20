@@ -17,14 +17,41 @@ public class GrabObjet : MonoBehaviour {
     private FixedJoint joint;
     private bool jeter;
     private Rigidbody corps;
-    void Awake()
+        
+    void Start()
     {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
+        joint = GetComponent<FixedJoint>();
     }
 
     // Update is called once per frame
     void Update () {
+
+        if(Controller == null)
+        {
+            print("no Controller");
+        }
+
+        var device = SteamVR_Controller.Input((int)trackedObj.index);
+
         if (Controller.GetHairTrigger())
+        {
+            if (collidingObject)
+            {
+                GrabObject();
+            }
+        }
+
+        else if (Controller.GetHairTriggerUp())
+        {
+            if (objectInHand)
+            {
+                ReleaseObject();
+            }
+        }
+
+
+        /*if (Controller.GetHairTrigger())
         {
             if (collidingObject)
             {
@@ -39,10 +66,10 @@ public class GrabObjet : MonoBehaviour {
             {
                 ReleaseObject();
             }
-        }
+        }*/
     }
 
-  /*  void FixedUpdate()
+   /* void FixedUpdate()
     {
         Transform origin;
         if(trackedObj.origin != null)
@@ -58,7 +85,7 @@ public class GrabObjet : MonoBehaviour {
 
              objectInHand.GetComponent<Rigidbody>().velocity = Controller.velocity*1000;
              objectInHand.GetComponent<Rigidbody>().angularVelocity = Controller.angularVelocity;
-             //objectInHand.GetComponent<Rigidbody>().maxAngularVelocity = objectInHand.GetComponent<Rigidbody>().angularVelocity.magnitude;
+             objectInHand.GetComponent<Rigidbody>().maxAngularVelocity = objectInHand.GetComponent<Rigidbody>().angularVelocity.magnitude;
          }
     }*/
 
@@ -104,8 +131,8 @@ public class GrabObjet : MonoBehaviour {
         // 
         joint = AddFixedJoint();
         joint.connectedBody = objectInHand.GetComponent<Rigidbody>();
-        jeter = false;
-        corps = null;
+        //jeter = false;
+        //corps = null;
     }
 
     // 
@@ -127,8 +154,9 @@ public class GrabObjet : MonoBehaviour {
             Destroy(GetComponent<FixedJoint>());
             jeter = true;
             // 
-            objectInHand.GetComponent<Rigidbody>().velocity = Controller.velocity;
-            objectInHand.GetComponent<Rigidbody>().angularVelocity = Controller.angularVelocity;
+            objectInHand.GetComponent<Rigidbody>().velocity = transform.TransformVector(Controller.velocity);
+            objectInHand.GetComponent<Rigidbody>().angularVelocity = Controller.angularVelocity*0.25f;
+            objectInHand.GetComponent<Rigidbody>().maxAngularVelocity = objectInHand.GetComponent<Rigidbody>().angularVelocity.magnitude;
         }
         // 
         objectInHand = null;

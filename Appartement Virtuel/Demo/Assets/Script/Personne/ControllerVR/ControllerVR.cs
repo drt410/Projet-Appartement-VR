@@ -48,7 +48,9 @@ public class ControllerVR : MonoBehaviour
 
     void Start()
     {
-        
+        Valve.VR.OpenVR.System.ResetSeatedZeroPose();
+        Valve.VR.OpenVR.Compositor.SetTrackingSpace(
+        Valve.VR.ETrackingUniverseOrigin.TrackingUniverseSeated);
         perso = GetComponent<PersonneMouvement>();
        // Cursor.visible = false;
 
@@ -57,6 +59,7 @@ public class ControllerVR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
         {
 

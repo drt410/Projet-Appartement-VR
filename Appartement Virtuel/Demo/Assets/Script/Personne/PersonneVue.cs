@@ -51,13 +51,16 @@ public class PersonneVue : MonoBehaviour {
     {
 
         float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
         float deltaX = Input.GetAxisRaw("Horizontal");
-        //float rotatAmountX = mouseX + deltaX * sensitivity;
-        float rotatAmountX = deltaX * sensitivity;
+        float rotatAmountX = mouseX + deltaX * sensitivity;
+        float rotatAmountY = mouseY * sensitivity;
+        //float rotatAmountX = deltaX * sensitivity;
 
         Vector3 targetRot = transform.rotation.eulerAngles;
         Vector3 targetRotBody = body.rotation.eulerAngles;
 
+        targetRot.x -= rotatAmountY;
         targetRotBody.y += rotatAmountX;
 
         transform.rotation = Quaternion.Euler(targetRot);
@@ -67,11 +70,11 @@ public class PersonneVue : MonoBehaviour {
         if (Input.GetKeyDown("u") || Input.GetKey("u"))
         {
             mouseX = Input.GetAxis("Mouse X");
-            float mouseY = Input.GetAxis("Mouse Y");
+            mouseY = Input.GetAxis("Mouse Y");
            
-          //  float rotatAmountX = deltaX + mouseX * sensitivity;
+            //float rotatAmountX = deltaX + mouseX * sensitivity;
             //float rotatAmountX = deltaX * sensitivity;
-            float rotatAmountY = amount * sensitivity;
+             rotatAmountY = amount * sensitivity;
 
              targetRot = transform.rotation.eulerAngles;
              targetRotBody = body.rotation.eulerAngles;
@@ -88,11 +91,11 @@ public class PersonneVue : MonoBehaviour {
         if (Input.GetKeyDown("p") || Input.GetKey("p"))
         {
             mouseX = Input.GetAxis("Mouse X");
-            float mouseY = Input.GetAxis("Mouse Y");
+            mouseY = Input.GetAxis("Mouse Y");
            // float deltaX = Input.GetAxisRaw("Horizontal");
            // float rotatAmountX = deltaX + mouseX * sensitivity;
             //float rotatAmountX = deltaX * sensitivity;
-            float rotatAmountY = amount * sensitivity;
+             rotatAmountY = amount * sensitivity;
 
              targetRot = transform.rotation.eulerAngles;
              targetRotBody = body.rotation.eulerAngles;
