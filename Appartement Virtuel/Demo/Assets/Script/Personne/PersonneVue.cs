@@ -92,8 +92,8 @@ public class PersonneVue : MonoBehaviour {
         {
             mouseX = Input.GetAxis("Mouse X");
             mouseY = Input.GetAxis("Mouse Y");
-           // float deltaX = Input.GetAxisRaw("Horizontal");
-           // float rotatAmountX = deltaX + mouseX * sensitivity;
+            // float deltaX = Input.GetAxisRaw("Horizontal");
+            // float rotatAmountX = deltaX + mouseX * sensitivity;
             //float rotatAmountX = deltaX * sensitivity;
              rotatAmountY = amount * sensitivity;
 
