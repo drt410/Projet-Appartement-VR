@@ -8,7 +8,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class PersonneSave : MonoBehaviour
 {
 
-    string path = "C:\\Users\\admin\\Documents\\Log";
+    string path = "C:\\Users\\drtra\\Documents\\Log";
     public Transform body;
     string filename;
     public GameObject personne;
