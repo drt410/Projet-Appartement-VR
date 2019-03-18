@@ -14,7 +14,6 @@ public class LevePersonneController : MonoBehaviour {
 
 		if (Input.GetKeyDown (deplacer) || Input.GetKeyDown("t")) 
 		{
-
 			plDirector.Play ();
 		}
 	}
