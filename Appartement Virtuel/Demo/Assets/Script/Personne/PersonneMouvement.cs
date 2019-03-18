@@ -10,17 +10,20 @@ public class PersonneMouvement : MonoBehaviour {
 	private Vector3 rotation = Vector3.zero;
    
     // Use this for initialization
-    void Start () {
+    void Start () 
+    {
         rb = GetComponent<Rigidbody>();
 
 	}
 	
-	public void Move (Vector3 _velocity) {
+	public void Move (Vector3 _velocity) 
+	{
 
         velocity = _velocity;
     }
 
-	public void Rotation (Vector3 _rotation) {
+	public void Rotation (Vector3 _rotation) 
+	{
 
 		rotation = _rotation;
 	}
@@ -39,6 +42,7 @@ public class PersonneMouvement : MonoBehaviour {
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
         }
     }
+    
 	void PerformRotation()
 	{
 		rb.MoveRotation (rb.rotation * Quaternion.Euler (rotation));
