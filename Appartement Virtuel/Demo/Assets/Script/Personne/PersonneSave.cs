@@ -51,10 +51,6 @@ public class PersonneSave : MonoBehaviour
         //nb = PlayerPrefs.GetInt("nombre");
         // log(filename);
     }
-    void Update() { }
-
-
-
 
     void OnTriggerStay(Collider collider)
     {
