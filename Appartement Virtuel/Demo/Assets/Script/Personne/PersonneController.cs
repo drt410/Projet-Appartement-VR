@@ -6,7 +6,8 @@ using UnityEngine;
 public class PersonneController : MonoBehaviour {
 
     public float speed = 500.0f;
-	public float sensitivity = 30.0f;
+    public float sensitivity = 30.0f;
+    
     private PersonneMouvement perso;
 
     // Use this for initialization
