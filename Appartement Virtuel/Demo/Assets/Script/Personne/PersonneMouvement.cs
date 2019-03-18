@@ -28,7 +28,7 @@ public class PersonneMouvement : MonoBehaviour {
     void FixedUpdate()
     {
         PerformMovement();
-		PerformRotation();
+		//PerformRotation();
 
     }
 

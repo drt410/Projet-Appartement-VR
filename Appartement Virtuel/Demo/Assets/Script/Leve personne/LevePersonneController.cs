@@ -13,7 +13,7 @@ public class LevePersonneController : MonoBehaviour {
 	{
 		//print ("test");
 
-		if (Input.GetKeyDown (deplacer)) {
+		if (Input.GetKeyDown (deplacer) || Input.GetKeyDown("t")) {
 
 			plDirector.Play ();
 		}

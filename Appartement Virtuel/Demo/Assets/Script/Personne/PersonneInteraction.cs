@@ -41,12 +41,12 @@ public class PersonneInteraction : MonoBehaviour {
             }
             if (hit.collider.gameObject.tag == "interactible")
             {
-                if (Input.GetKeyDown(deplacer))
+                if (Input.GetKeyDown(deplacer) && anim.GetBool("ranger")== true)
                 {
                     anim.Play("ouvrir");
                     anim.SetBool("ranger", false);
                 }
-                else if (Input.GetKeyDown(deplacer))
+                else if (Input.GetKeyDown(deplacer) && anim.GetBool("ranger") == false)
                 {
                     anim.SetBool("ranger", true);
                 }
